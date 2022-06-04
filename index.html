@@ -3,6 +3,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Willy Wonkas - Personal Portfolio Website Template" />
 	<meta name="keywords" content="blog, business card, creative, creative portfolio, cv theme, online resume, personal, portfolio, professional cv, responsive portfolio, resume, resume theme, vcard" />
@@ -13,8 +16,25 @@
    <!--favicon-img-->
    <!--main css file should not be removed -->
     <link rel="stylesheet" href="css/index.css">
+    <style type="text/css">
+    #all #header .header-content .header-content-box .firstline .color {
+	font-family: "GenSenRounded JP B";
+}
+    #all #header .header-content .header-content-box .firstline p {
+	font-family: "GenSenRounded JP B";
+}
+    </style>
     <!--main css file-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    
+	<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <script src="components/set-image.js"></script>
+    
+    
 </head>
 <body>
     <!--contains all the div-->
@@ -24,8 +44,8 @@
     <!--mouse  follower-->
     <!--loader-->
         <div id="loader">
-            <span class="color">Arlo</span>Brown 
-        </div>
+            <span class="color">...NOW LOADING...</span>網頁讀取中
+      </div>
     <!--loader-end-->
     <!--link-screen-->
         <div id="breaker">
@@ -46,9 +66,9 @@
             <div class="navigation-links">
                 <a href="#" data-text="HOME" id="home-link" >HOME</a>
                 <a href="#" data-text="ABOUT" id="about-link" >ABOUT</a>
-                <a href="#" data-text="BLOG" id="blog-link" >BLOG</a>
-                <a href="#" data-text="PORTFOLIO" id="portfolio-link" >PORTFOLIO</a>
-                <a href="#" data-text="CONTACT" id="contact-link" >CONTACT</a>
+                <a href="#" data-text="META" id="blog-link" >METAVERSE</a>
+                <a href="#" data-text="PORTFOLIO" id="portfolio-link" >ANIMATION</a>
+                <a href="#" data-text="TOUCH" id="contact-link" >MULTIMEDIA</a>
             </div>
         </div>
         <!--Navigator-Fullscreen END-->
@@ -77,15 +97,17 @@
             <!--Social Media Links end-->
             <div class="header-content">
                 <div class="header-content-box">
-                <div class="firstline"><span class="color">Arlo </span>Brown</div>
+                <div class="firstline">
+                  <p><span class="color">曾繁庭 </span>for CHT 2022</p>
+                </div>
                 <div class="secondline">
-                I'm a
-            <span class="txt-rotate color" data-period="1200"data-rotate='[ " Designer.", " Blogger.", " Freelancer." ]'></span>
+                My 
+            <span class="txt-rotate color" data-period="1200"data-rotate='[ " Design.", " Animation.", " Multimedia." ]'></span>
             <span class="slash">|</span>
         </div>
                     <div class="contact">
-                <a href="Mailto:#"><img src="images/mail.png" alt="email-pic" class="contactpic"></a><!--Your email Id write in place of "#"-->
-                <a href="Tel:#"><img src="images/call.png" alt="phone-pic" class="contactpic"></a><!--Your telephone number Id write in place of "#"-->
+                <a><img src="images/mail.png" alt="email-pic" class="contactpic"></a><!--Your email Id write in place of "#"-->
+                <a><img src="images/call.png" alt="phone-pic" class="contactpic"></a><!--Your telephone number Id write in place of "#"-->
                     </div>    
             </div>
             </div>
@@ -133,20 +155,21 @@
             <!--about content-->
             <div id="about-content">
                 <div class="about-header">
-                    About <span class="color">Me</span>
-                    <span class ="header-caption">Get to Know <span class="color"> me.</span></span>
+                    About <span class="color">網頁簡述</span>
+                    <span class ="header-caption">Get to Know <span class="color"> This Site.</span></span>
                 </div>
                 <div class="about-main">
             <div class="about-first-paragraph wow">
             <!--about description-->
                <span class="about-first-line">
-                    I'm creative 
-                    <span class="color">web developer</span>
-                     based in New York , USA </span>
+                    此網站內容用於CHT111年第12次從業人員遴選 
+                    <span class="color">  元宇宙多媒體設計與建模技術研究  </span>
+                     曾繁庭之作品集整合網頁 </span>
                      <br>
-               <span class="about-second-line"> With 20 years of experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step while working.</span>
+               <span class="about-second-line"> 本網站內容由五頁面構成—入口首頁、網頁簡述、元宇宙相關、動畫作品集、多媒體互動。
+              其中元宇宙相關與多媒體互動兩頁面的作品內容為CHT承攬工作案之影像內容，著作財產權歸於CHT，特此告知。</span>
                <div class="cv">
-                <a href="#"><button>Download <span class="colors">CV</span></button></a>
+                <a href="#"></a>
             </div>
             </div>
             <!--about picture-->
@@ -190,7 +213,7 @@
                     </div>
             <!--services header-->
                     <div class="services-heading wow">
-                        <span class="color">My</span> Services
+                        <span class="color">Category</span> 作品類別
                     </div>
             <!--services header end-->
             <!--services content-->
@@ -200,8 +223,8 @@
                                <img src="images/coding.png" alt="service-one">
                                </div>
                                <div class="service-description">
-                                <h2>Web Designing</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quibusdam possimus</p>
+                                <h2>METAVERSE Design</h2>
+                                <p>活用3D動畫製作、遊戲製作的經驗於元宇宙內容的設計創造。</p>
                                </div>
                            </div>
                            <div class="service-two service wow">
@@ -209,8 +232,8 @@
                                <img src="images/instagram.png" alt="service-two">
                                </div>
                                <div class="service-description">
-                                <h2>Social Media</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quibusdam possimus</p>
+                                <h2>ANIMATION Design</h2>
+                                <p>本科系動畫專業，熟稔多樣獨立製作2D、3D動畫短片的工具。</p>
                                </div>
                            </div>
                            <div class="service-three service wow">
@@ -218,85 +241,19 @@
                                <img src="images/bulb.png" alt="service-three">
                             </div>
                             <div class="service-description">
-                                <h2>Creative Design</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quibusdam possimus</p>
+                                <h2>MULTIMEDIA Design</h2>
+                                <p>體感感測器搭配整合串接的軟體，多媒體互動裝置應運而生。</p>
                             </div>
                         </div>
                     </div>
             </div>
             <!--services content end-->
             <!--services end-->
-            <div id="skills">
-                <div class="skills-header">
-                     My <span class="color"> Skills</span>
-                </div>
-                <div class="skills-content " style="text-align: center;">
-                    <div class="skill-html skill">
-                        <div class="skill-text">
-                    <div class="html">
-                        HTML/CSS
-                    </div>
-                        </div>
-                    <div class="html-prog wow prog">
-                 <div class="html-progress wow">95%</div>
-                    </div>
-                    </div>
-                    <div class="skill-html skill">
-                        <div class="skill-text">
-                    <div class="html">
-                      Javascript
-                    </div>
-                        </div>
-                    <div class="html-prog wow prog">
-                 <div class="js-progress wow">90%</div>
-                    </div>
-                    </div>
-                    <div class="skill-html skill">
-                        <div class="skill-text">
-                    <div class="html">
-                        Adobe Ps
-                    </div>
-                        </div>
-                    <div class="html-prog wow prog">
-                 <div class="adobe-progress wow">83%</div>
-                    </div>
-                    </div>
-                    <div class="skill-html skill">
-                        <div class="skill-text">
-                    <div class="html">
-                        PHP
-                    </div>
-                        </div>
-                    <div class="html-prog wow prog">
-                 <div class="php-progress wow">87%</div>
-                    </div>
-                    </div>
-                    <div class="skill-html skill">
-                        <div class="skill-text">
-                    <div class="html">
-                        JQuery
-                    </div>
-                        </div>
-                    <div class="html-prog wow prog">
-                 <div class="jquery-progress wow">94%</div>
-                    </div>
-                    </div>
-                    <div class="skill-html skill">
-                        <div class="skill-text">
-                    <div class="html">
-                        SEO
-                    </div>
-                        </div>
-                    <div class="html-prog wow prog">
-                 <div class="seo-progress wow">84%</div>
-                    </div>
-                    </div>
-                </div>
-            </div>
+            <div id="skills"> </div>
     <!--copyright-section You Can Remove After Downloading-->
             <div class="footer">
              <div class="footer-text">
-                 <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> Willy Wonkas
+                 <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> TSENG FAN-TING
              </div>
             </div>
     <!--copyright-section-->
@@ -334,40 +291,44 @@
                     </div>
                 </div>
                 </div>
-            <div class="portfolio-header"> <span class="color"> My </span> Portfolio
-            <span class ="header-caption"> Some Of My <span class="color"> Works</span></span></div>
+            <div class="portfolio-header"> <span class="color"> ANIMATION </span> Portfolio
+            <span class ="header-caption"> As an ANIMATOR <span class="color"> 動畫作品集</span></span></div>
              <div id="portfolio-content">
+                
+                 <div align="center">
+				<iframe width="1120" height="630" src="https://www.youtube.com/embed/nlBbnSxqYEo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
                  <div class="portfolio portfolio-first">
                      <div class="portfolio-image">
                         <img src="images/portfolio-first.jpg" alt="portfolio-first">
                      </div>
                      <div class="portfolio-text">
-                         <h2>App Idea</h2>
-                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ut optio repellat cupiditate 
-                             expedita eius dignissimos. Id cumque placeat minima ad laudantium suscipit voluptatem ducimus</p>
+                         <h2>披紅</h2>
+                         <p>3D動畫。獨立製作。</p>
+                         <p>個人研究所論文動畫。研究課題為非寫實性算圖技術。《披紅》是關於文化信仰認同的故事，敘述在未來世界的陣頭師傅，如何克服身心上的阻礙，即便心有猶疑，也執意完成藝陣演出。</p>
                          <div class="button"><a href="#"><button><span class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
                      </div>
                  </div>
-                 <div class="portfolio portfolio-second">
-                    <div class="portfolio-image">
+<div class="portfolio portfolio-second">
+         <div class="portfolio-image">
                         <img src="images/portfolio-second.jpg" alt="portfolio-second">
                     </div>
                     <div class="portfolio-text">
-                        <h2>Web Designing</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id cumque placeat minima ad laudantium suscipit
-                             voluptatem ducimus. Id cumque placeat minima ad laudantium suscipit voluptatem ducimus</p>
+                        <h2>MOU</h2>
+                        <p>3D動畫。獨立製作。</p>
+                        <p>研究所技術測試動畫。研究課題為非寫實性算圖技術。《MOU》是關於失眠的故事，敘述食夢維生的夢魔，遇上不睡覺的小嬰兒，如何成功的填飽肚子。</p>
                         <div class="button"><a href="#"><button><span class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
                     </div>
                 </div>
              
                 <div class="portfolio portfolio-third">
                     <div class="portfolio-image">
-                        <img src="images/portfolio-third.jpg" alt="portfolio-third">
+                        <img src="images/portfolio-third.jpg" alt2D="portlird">
                     </div>
                     <div class="portfolio-text">
-                        <h2>UI Designing</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ut optio repellat cupiditate expedita eius dignissimos
-                            .. Id cumque placeat minima ad laudantium suscipit voluptatem ducimus</p>
+                        <h2>re▶quiem</h2>
+                        <p>2D動畫。</p>
+                        <p>大學畢業專題動畫。為團隊製作，個人在團隊中負責造型設計，原畫，部分動畫。為生涯首個完整進行傳統紙上繪製2D動畫流程的動畫專題。</p>
                         <div class="button"><a href="#"><button><span class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
                     </div>
                 </div>
@@ -376,9 +337,9 @@
                         <img src="images/portfolio-fourth.jpg" alt="portfolio-fourth">
                     </div>
                     <div class="portfolio-text">
-                        <h2>Wow Graphics</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ut optio repellat cupiditate
-                             expedita eius dignissimos. Id cumque placeat minima ad laudantium suscipit voluptatem ducimus</p>
+                        <h2>CHURCH ERA</h2>
+                        <p>電腦遊戲。</p>
+                        <p>與校內同好自主研究製作的策略遊戲。在團隊中擔任角色繪製，背景繪製，UI項目串接。</p>
                         <div class="button"><a href="#"><button><span class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
                     </div>
                 </div>
@@ -386,7 +347,7 @@
                     <!--copyright-section You Can Remove After Downloading-->
             <div class="footer">
                 <div class="footer-text">
-                    <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> Willy Wonkas
+                    <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> TSENG FAN-TING
                 </div>
                </div>
        <!--copyright-section-->
@@ -424,91 +385,124 @@
                     </div>
                 </div>
                 </div>
-        <div class="blog-header"> Blogs</span>
-            <span class ="header-caption"> My Latest <span class="color"> blog posts.</span></span></div>
-            <div class="blog-content">
+        <div class="blog-header"> METAVERSE</span>
+            <span class ="header-caption"> Something about Virtual reality <span class="color"> 元宇宙虛擬空間</span></span></div>
+            
+            
+ <div align="center">
+    <a-scene class="aframebox" embedded>
+
+      <a-assets>
+        <img id="city" crossorigin="anonymous" src="https://cdn.glitch.global/4aab35f8-10dd-4403-9628-0e48f9009915/VROOM.jpg?v=1654157519557">
+        <img id="city-thumb" crossorigin="anonymous" src="https://cdn.glitch.global/4aab35f8-10dd-4403-9628-0e48f9009915/BUTTON01.jpg?v=1654346484254">
+        <img id="cubes-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
+        <img id="sechelt-thumb" crossorigin="anonymous" src="https://cdn.glitch.global/4aab35f8-10dd-4403-9628-0e48f9009915/BUTTON02.jpg?v=1654346491040">
+        <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+        <img id="cubes" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
+        <img id="sechelt" crossorigin="anonymous" src="https://cdn.glitch.global/4aab35f8-10dd-4403-9628-0e48f9009915/SROOM.jpg?v=1654157526875">
+
+        <!-- Image link template to be reused. -->
+        <script id="link" type="text/html">
+          <a-entity class="link"
+            geometry="primitive: plane; height: 1; width: 1"
+            material="shader: flat; src: ${thumb}"
+            event-set__1="_event: mousedown; scale: 1 1 1"
+            event-set__2="_event: mouseup; scale: 1.2 1.2 1"
+            event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
+            event-set__4="_event: mouseleave; scale: 1 1 1"
+            set-image="on: click; target: #image-360; src: ${src}"
+            sound="on: click; src: #click-sound"></a-entity>
+        </script>
+      </a-assets>
+
+      <!-- 360-degree image. -->
+      <a-sky id="image-360" radius="10" src="#city"></a-sky>
+
+      <!-- Image links. -->
+      <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
+        <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
+      </a-entity>
+      <!-- Camera + cursor. -->
+      <a-camera>
+        <a-cursor id="cursor"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </div>
+           
+
+    <div class="blog-content">
                  <div class="blogs">
                      <a href="#">
                      <div class="img">
                         <img src="images/post-one.jpg" alt="blog-one">
-                        <div class="blog-date">8 May,20</div>
+                        <div class="blog-date">平視圖</div>
                      </div>
                      <div class="blog-text">
-                         <h3>Harleys In Hawaai</h3>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus alias dolore recusandae illum, corrupti quo 
-                             veniam saepe aliquid! Quis voluptates ratione consequuntur vel, perferendis cum provident? Magnam fugiat voluptas
-                              libero.</p>
+                         <h3>3D建模—虛擬卡拉OK</h3>
+                         <p>按下上方眼鏡按鈕，能展開元宇宙虛擬展間。此頁面的虛擬展間所用的兩個模型其之一，為虛擬卡拉OK空間。建模與光照設置使用BLENDER。</p>
                      </div></a>
                  </div>      
                  <div class="blogs">
                     <a href="#">
                     <div class="img">
                         <img src="images/post-two.jpg" alt="blog-two">
-                        <div class="blog-date">16 Jan,20</div>
+                        <div class="blog-date">側視圖</div>
                     </div>
                     <div class="blog-text">
-                        <h3>Key To Be Productive</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt maiores, 
-                            recusandae cupiditate ducimus a non tempora, architecto obcaecati eaque ipsum assumenda harum dolorum iusto tenetur
-                             eius eligendi dolor magnam sit!</p>
+                        <h3>A-frame</h3>
+                        <p>此虛擬展間使用A-frame技術架構，此架構同時支援JAVA Script，能在空間內實現簡單的條件互動。</p>
                     </div></a>
                 </div>      
                 <div class="blogs">
                     <a href="#">
                     <div class="img">
                         <img src="images/post-three.jpg" alt="blog-three">
-                        <div class="blog-date">30 Nov,19</div>
+                        <div class="blog-date">上視圖</div>
                     </div>
                     <div class="blog-text">
-                        <h3>Caffeine Addict</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo nostrum impedit 
-                            ipsam perspiciatis ratione sapiente quasi optio reprehenderit, labore consequuntur suscipit cum quas.
-                             Officiis dolorem asperiores, ut necessitatibus quas doloremque?</p>
+                        <h3>360°算圖</h3>
+                        <p>A-frame框架雖然也能直接放入3D模型，但為了讀取與設備運算快速，使用一般較通用的作法，即算出360度貼圖做展示</p>
                     </div></a>
                 </div>
                 <div class="blogs">
                     <a href="#">
                     <div class="img">
                         <img src="images/post-four.jpg" alt="blog-four">
-                        <div class="blog-date">6 Jul,19</div>
+                        <div class="blog-date">外觀</div>
                     </div>
                     <div class="blog-text">
-                        <h3>Web Development</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, veniam ratione quam vitae,
-                             quibusdam explicabo rem debitis velit ipsa repellat, impedit nulla fuga? Amet corporis praesentium quae.
-                              Sed, quibusdam necessitatibus.</p>
+                        <h3>元宇宙展間切換</h3>
+                        <p>在虛擬展間內將圓形游標對準漂浮按鈕按下滑鼠，能切換元宇宙虛擬展間。。</p>
                     </div></a>
                 </div>  
                 <div class="blogs">
                     <a href="#">
                     <div class="img">
                         <img src="images/post-five.jpg" alt="blog-five">
-                        <div class="blog-date">1 Jun,19</div>
+                        <div class="blog-date">內部</div>
                     </div>
                     <div class="blog-text">
-                        <h3>Work From Home</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sunt eum necessitatibus rem 
-                            dignissimos nulla mollitia cumque, provident officiis non vitae? Animi aut doloremque illum, soluta hic minus 
-                            sint explicabo..</p>
+                        <h3>3D建模—虛擬舞廳</h3>
+                        <p>此頁面所用的兩個模型其之二，為虛擬舞廳。建模與光照設置使用BLENDER。</p>
                     </div></a>
                 </div>  
                 <div class="blogs">
                     <a href="#">
                     <div class="img">
                         <img src="images/post-six.jpg" alt="blog-six">
-                        <div class="blog-date">28 Feb,19</div>
+                        <div class="blog-date">局部</div>
                     </div>
                     <div class="blog-text">
-                        <h3>Business Trip</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo tempora dolorum fuga ratione, unde, 
-                            ex quaerat iste numquam nemo nihil nobis rem sint quia recusandae dignissimos quos ut rerum nam.</p>
+                        <h3>VR設備</h3>
+                        <p>此虛擬展間網頁使用者如備有A-frame技術架構支援的VR設備，能在VR環境內瀏覽此空間，更增臨場感。</p>
                     </div></a>
                 </div>        
             </div>
                <!--copyright-section You Can Remove After Downloading-->
                <div class="footer">
                 <div class="footer-text">
-                    <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> Willy Wonkas
+                    <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> TSENG FAN-TING
                 </div>
                </div>
        <!--copyright-section-->
@@ -546,69 +540,74 @@
                 </div>
             </div>
             </div>
-         <div class="contact-header">Contact <span class="color"> Me</span>
+         <div class="contact-header">TouchDesigner <span class="color"> MULTIMEDIA</span>
         <div class="contact-header-caption"> <span class="color"> Get</span> In Touch.</div></div>
-        <div class="contact-content">
-            <!--Contact form-->
-             <div class="contact-form">
-                 <div class="form-header">
-                     Message Me
-                 </div>
-                 <form id="myForm" action="#">
-                    <div class="input-line">
-                        <input  id="name" type="text" placeholder="Name" class="input-name">
-                        <input id="email" type="email" placeholder="Email"  class="input-name">
-                    </div>
-                    <input type="text" id="subject" placeholder="subject" class="input-subject">
-                    <textarea id ="body" class="input-textarea" placeholder="message"></textarea>
-                    <button type="button" id ="submit" value="send">Submit</button>
-                 </form>
-               
-             </div>
-            <!--Contact form-->
-            <!--Contact information-->
-             <div class="contact-info">
-                <div class="contact-info-header">
-                    Contact Info
-                </div>
-                <div class="contact-info-content">
-                <div class="contect-info-content-line">
-                    <img src="./images/icon-name.png" class="icon" alt="name-icon">
-                    <div class="contact-info-icon-text">
-                        <h6>Name</h6>
-                        <p>Arlo Brown</p>
-                  </div>
-                </div>
-                <div class="contect-info-content-line">
-                  <img src="./images/icon-location.png" class="icon" alt="location-icon">
-                  <div class="contact-info-icon-text">
-                      <h6>Location</h6>
-                      <p>New York, USA</p>
-                </div>
-              </div>
-              <div class="contect-info-content-line">
-                  <img src="./images/icon-phone.png" class="icon" alt="phone-icon">
-                  <div class="contact-info-icon-text">
-                      <h6>Call</h6>
-                      <p>+9865376531</p>
-                </div>
-              </div>
-              
-              <div class="contect-info-content-line">
-                  <img src="./images/icon-email.png" class="icon" alt="email-icon">
-                  <div class="contact-info-icon-text">
-                      <h6>Email</h6>
-                      <p>Info@example.com</p>
-                </div>
-              </div>
-                </div>
-            <!--Contact information end-->
-           </div>
+        <div align="center">
+				<iframe width="1120" height="630" src="https://www.youtube.com/embed/NGy4wEimwbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="1120" height="630" src="https://www.youtube.com/embed/_1FYj10jO9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="1120" height="630" src="https://www.youtube.com/embed/WKamhDmk-70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+       <div class="blog-content">
+          <div class="blogs"> <a href="#">
+            <div class="img"> <img src="images/post-one1.jpg" alt="blog-one">
+              <div class="blog-date">互動首頁</div>
+            </div>
+            <div class="blog-text">
+              <h3>多媒體互動—神來快手</h3>
+              <p>需搭配KINECT攝影機架設的多媒體互動裝置。個人在此專案中負責的部分是程式建構串接、視覺元素串接，與部分視覺元件製作。</p>
+            </div>
+          </a> </div>
+          <div class="blogs"> <a href="#">
+            <div class="img"> <img src="images/post-two1.jpg" alt="blog-two">
+              <div class="blog-date">互動首頁</div>
+            </div>
+            <div class="blog-text">
+              <h3>多媒體互動—球來運轉</h3>
+              <p>需搭配深度攝影機架設的多媒體互動裝置。個人在此專案中負責的部分是程式建構串接、視覺元素串接。</p>
+            </div>
+          </a> </div>
+          <div class="blogs"> <a href="#">
+            <div class="img"> <img src="images/post-three1.jpg" alt="blog-three">
+              <div class="blog-date">互動首頁</div>
+            </div>
+            <div class="blog-text">
+              <h3>多媒體互動—FIT TIME</h3>
+              <p>需搭配KINECT攝影機架設的多媒體互動裝置。個人在此專案中負責的部分是程式建構串接、視覺元素串接。</p>
+            </div>
+          </a> </div>
+          <div class="blogs"> <a href="#">
+            <div class="img"> <img src="images/post-four1.jpg" alt="blog-four">
+              <div class="blog-date">互動畫面</div>
+            </div>
+            <div class="blog-text">
+              <h3>互動內容—神來快手</h3>
+              <p>由KINECT攝影機辨識使用者的右手位置，將其收到的位置訊息轉換後牽動虛擬情境中的槌子，在虛擬情境中即時進行問答互動，從三個答案選項中找出正確回答吧。</p>
+            </div>
+          </a> </div>
+          <div class="blogs"> <a href="#">
+            <div class="img"> <img src="images/post-five1.jpg" alt="blog-five">
+              <div class="blog-date">互動畫面</div>
+            </div>
+            <div class="blog-text">
+              <h3>互動內容—球來運轉</h3>
+              <p>由深度感測裝置辨識使用者的身體輪廓，將其資訊轉換後成為碰撞體，在虛擬情境中即時進行物件互動，正確引導分數球獲得高分數吧。</p>
+            </div>
+          </a> </div>
+          <div class="blogs"> <a href="#">
+            <div class="img"> <img src="images/post-six1.jpg" alt="blog-six">
+              <div class="blog-date">互動畫面</div>
+            </div>
+            <div class="blog-text">
+              <h3>互動內容—FIT TIME</h3>
+              <p>由KINECT攝影機辨識使用者的肢體關節位置，用其收到的位置訊息判斷使用者的動作，隨著畫面指示的運動，確實的活動身體吧。</p>
+            </div>
+          </a> </div>
         </div>
-                    <!--copyright-section You Can Remove After Downloading-->
+
+<!--copyright-section You Can Remove After Downloading-->
                     <div class="footer">
                         <div class="footer-text">
-                            <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> Willy Wonkas
+                            <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> TSENG FAN-TING
                         </div>
                        </div>
                <!--copyright-section-->
