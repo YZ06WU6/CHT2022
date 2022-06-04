@@ -8,17 +8,16 @@
 @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:500&display=swap');
 *{
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
+	padding: 0%;
+	box-sizing: inherit;
 }
 ::-webkit-scrollbar{
     width: 4px;
-    color:#c70039;
+    color:#f08912;
     transition: all .4s ease;
 }
 ::-webkit-scrollbar-thumb {
-    background: #c70039; 
+    background: #f08912; 
     border-radius: 4px;
     width: 4px;
     transition: all .4s ease;
@@ -43,28 +42,28 @@ input[type=number] {
     
   }
   #loader{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      height:100vh;
-      position: fixed;
-      z-index:100;
-      font-family: poppins;
-      background-color: #202020;
-      color: whitesmoke;
-      font-size: 70px;
-      width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+	position: fixed;
+	z-index: 100;
+	font-family: "源泉圓體 B";
+	background-color: #f08912;
+	color: whitesmoke;
+	font-size: 70px;
+	width: 100%;
   }
 body{
-    user-select: none;
-    height: auto;
-    overflow-x: hidden;
-    width: 100%;
-    background: #171717;
+	user-select: none;
+	height: auto;
+	overflow-x: hidden;
+	width: 100%;
+	background: #0056a3;
 }
 #header{
-    background:#171717;
+    background:#0056a3;
     height: 100vh;
     width: 100%;;
     overflow: hidden;
@@ -114,14 +113,14 @@ body{
 .menubar span{
     position: relative;
     background-color:transparent;
-    height:2px;
-    width: 20px;
+    height:10px;
+    width: 40px;
     display: block;
-    margin:6px;
+    margin:12px;
     border-radius: 20px;
 }
 .menubar .first-span{
-    width:35px;
+    width:50px;
 }
 .menubar .first-span::before{
     content: "";
@@ -135,7 +134,7 @@ body{
 
 }
 .menubar .second-span{
-    width:35px;
+    width:50px;
 }
 .menubar .second-span::before{
     content: "";
@@ -148,7 +147,7 @@ body{
     transition: all .3s ease;
 }
 .menubar .third-span{
-    width:35px;
+    width:50px;
 }
 .menubar .third-span::before{
     content: "";
@@ -236,34 +235,35 @@ body{
 
 }
 .header-content{
-    height: 100vh;
-    width: 100%;
-    float: left;
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    color: whitesmoke;
-    font-family: raleway;
-    font-weight: 400;
-    letter-spacing: 1px;
-    flex-direction: column;
-    font-size: 50px;
-    z-index: 1;
+	height: 100vh;
+	width: 100%;
+	float: left;
+	display: flex;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	color: whitesmoke;
+	font-family: "源泉圓體 B";
+	font-weight: 400;
+	letter-spacing: 1px;
+	flex-direction: column;
+	font-size: 50px;
+	z-index: 1;
 }
 .header-content-box{
-    z-index: 2;
-    text-align: center;
-    height: auto;
-    padding-right: 60px;
-    width: auto;
+	z-index: 2;
+	text-align: center;
+	height: auto;
+	padding-right: 60px;
+	width: auto;
+	font-family: "源泉圓體 B";
 
 }
 .header-content .firstline{
-    z-index: 2;
-    font-weight:700;
-    font-family: poppins;
-    font-size: 65px;
+	z-index: 2;
+	font-weight: bold;
+	font-family: "源泉圓體 B";
+	font-size: 65px;
 }
 .header-content .secondline{
     z-index: 2;
@@ -391,7 +391,7 @@ body{
 #breaker{
     height: 100vh;
     width: 200%;
-    background-color: #c70039;
+    background-color: #27ac37;
     opacity: 1;
     animation: breakeranimate 2s linear;
     display: none;
@@ -411,8 +411,8 @@ body{
     100%{ transform : translateX(100%) }
 }
 .color{
-    color: #c70039;
-    transition: all .4s ease;
+	color: #468EFF;
+	transition: all .4s ease;
 }
 #about{
     background-color: #101010;
@@ -448,18 +448,18 @@ body{
     padding:30px;
 }
 .about-header{
-    height: auto;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 45px;
-    font-family: raleway;
-    color: whitesmoke;
-    padding:10px;
-    padding-bottom: 30px;
-    padding-top: 60px;
-    font-weight: 900;
+	height: auto;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-size: 45px;
+	font-family: "源泉圓體 B";
+	color: whitesmoke;
+	padding: 10px;
+	padding-bottom: 30px;
+	padding-top: 60px;
+	font-weight: 900;
 }
 .about-first-paragraph{
     color: whitesmoke;
@@ -475,12 +475,14 @@ body{
 }
 .about-first-line{
     font-size: 35px;
+	font-family: "源泉圓體 B";
     opacity: 1;
     margin-bottom: 10px;
     display: block;
 }
 .about-second-line{
     opacity: .8;
+	font-family: "源泉圓體 B";
     font-size: 18px;
     font-weight: 200;
 }
@@ -524,7 +526,7 @@ body{
     border:none;
     padding: 15px 30px;
     color: whitesmoke;
-    background: #c70039;
+    background: #27ac37;
     outline: none;
     font-size:20px;
     font-family: aileron;
@@ -544,18 +546,18 @@ body{
 }
 
 .services-heading{
-    height: auto;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 45px;
-    font-family: raleway;
-    color: whitesmoke;
-    padding:10px;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    font-weight: 900;
+	height: auto;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-size: 45px;
+	font-family: "源泉圓體 B";
+	color: whitesmoke;
+	padding: 10px;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	font-weight: 900;
 
 }
 .about-first-paragraph {
@@ -600,21 +602,21 @@ body{
     margin: 20px;
     border-radius: 30%;
     padding: 10px;
-    border: 0px solid #c70039;
-    background: #c70039;
-    box-shadow:0px 0px 0px 0px #c70039 ;
+    border: 0px solid #27ac37;
+    background: #27ac37;
+    box-shadow:0px 0px 0px 0px #27ac37 ;
     height:100px;
     transition: all .8s ease;
 }
 .service:hover .service-img img{
-    box-shadow:0px 0px 0px 400px #c70039 ;
+    box-shadow:0px 0px 0px 400px #27ac37 ;
 }
 .service-description{
-    font-family: poppins;
-    color:whitesmoke;
-    position: relative;
-    display: inline-block;
-    z-index:2;
+	font-family: "源泉圓體 B";
+	color: whitesmoke;
+	position: relative;
+	display: inline-block;
+	z-index: 2;
 }
 .service-description h2{
     padding: 10px;
@@ -693,7 +695,7 @@ body{
     transition: all .4s ease;
     width:95%;
     border-radius: 10px;
-    background: #c70039;
+    background: #27ac37;
 }
 .js-progress{
     position: absolute;
@@ -707,7 +709,7 @@ body{
     transition: all .4s ease;
     width:90%;
     border-radius: 10px;
-    background: #c70039;
+    background: #27ac37;
 }
 .adobe-progress{
     position: absolute;
@@ -720,7 +722,7 @@ body{
     transition: all .4s ease;
     width:83%;
     border-radius: 10px;
-    background: #c70039;
+    background: #27ac37;
 }
 .php-progress{
     position: absolute;
@@ -732,7 +734,7 @@ body{
     justify-content: center;
     width:85%;
     border-radius: 10px;
-    background: #c70039;
+    background: #27ac37;
     transition: all .4s ease;
 }
 .jquery-progress{
@@ -746,7 +748,7 @@ body{
     transition: all .4s ease;
     width:94%;
     border-radius: 10px;
-    background: #c70039;
+    background: #27ac37;
 }
 .seo-progress{
     position: absolute;
@@ -759,33 +761,33 @@ body{
     width:84%;
     border-radius: 10px;
     transition: all .4s ease;
-    background: #c70039;
+    background: #27ac37;
 }
 .portfolio-header{
-    height: auto;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 45px;
-    font-family: raleway;
-    transition: all .4s ease;
-    color: whitesmoke;
-    padding:10px;
-    padding-bottom: 30px;
-    padding-top: 60px;
-    font-weight: 900;
+	height: auto;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-size: 45px;
+	font-family: "源泉圓體 B";
+	transition: all .4s ease;
+	color: whitesmoke;
+	padding: 10px;
+	padding-bottom: 30px;
+	padding-top: 60px;
+	font-weight: 900;
 }
 
 .header-caption{
-    opacity:.8;
-    display: block;
-    font-size: 20px;
-    font-family: raleway;
-    padding: 8px;
-    padding-top: 15px;
-    color: whitesmoke;
-    font-weight: 400;
+	opacity: .8;
+	display: block;
+	font-size: 20px;
+	font-family: "源泉圓體 B";
+	padding: 8px;
+	padding-top: 15px;
+	color: whitesmoke;
+	font-weight: 400;
 }
 .portfolio{
     height:auto;
@@ -814,19 +816,19 @@ padding-bottom: 40px;
 }
 
 .portfolio-text h2{
-    font-size: 35px;
-    font-family: poppins;
-    font-weight: 200;
-    padding: 20px;
-    color: #c70039;
-    transition: all .4s ease;
+	font-size: 35px;
+	font-family: "源泉圓體 B";
+	font-weight: 200;
+	padding: 20px;
+	color: #27ac37;
+	transition: all .4s ease;
 }
 .portfolio-text p{
-    font-size: 16px;
-    opacity: .8;
-    font-family: poppins;
-    font-weight: 200;
-    padding: 20px;
+	font-size: 16px;
+	opacity: .8;
+	font-family: "源泉圓體 B";
+	font-weight: 200;
+	padding: 20px;
 }
 .portfolio-text button{
     font-size: 16px;
@@ -835,11 +837,11 @@ padding-bottom: 40px;
     font-weight: 200;
     padding: 10px 20px;
     background:transparent;
-    color:#c70039;
+    color:#27ac37;
     transition: all .4s ease;
     outline: none;
     margin: 20px;
-    border: 1.5px solid #c70039;
+    border: 1.5px solid #27ac37;
     cursor: pointer;
     overflow: hidden;
     position: relative;
@@ -854,7 +856,7 @@ padding-bottom: 40px;
     top: 0;
     left: 0;
     z-index: 3;
-    background: #c70039;
+    background: #27ac37;
     transition: all .7s ease;
 }
 .portfolio-text button:hover{
@@ -885,7 +887,7 @@ padding-bottom: 40px;
     content: "";
     height: 100%;
     width: 100%;
-    background: #c70039;
+    background: #27ac37;
     opacity: .1;
     top: 0;
     left: 0;
@@ -910,18 +912,18 @@ padding-bottom: 40px;
     color:whitesmoke;
 }
 .blog-header{
-    height: auto;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 45px;
-    font-family: raleway;
-    color: whitesmoke;
-    padding:10px;
-    padding-bottom: 30px;
-    padding-top: 60px;
-    font-weight: 900;
+	height: auto;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-size: 45px;
+	font-family: "源泉圓體 B";
+	color: whitesmoke;
+	padding: 10px;
+	padding-bottom: 30px;
+	padding-top: 60px;
+	font-weight: 900;
 }
 .cursor{
     height: 50px;
@@ -986,7 +988,7 @@ padding-bottom: 40px;
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #c70039;
+    background: #27ac37;
     color: whitesmoke;
     font-size: 18px;
     text-align: center;
@@ -1003,14 +1005,14 @@ padding-bottom: 40px;
     transition: all .65s ease;
 }
 .blog-text{
-  height: 80%;
-  width: 100%;
-  text-align: center;
-  vertical-align: center;
-  font-family: poppins;
-  color: whitesmoke;
-  background-color: #050505;
-  transition: all .5s ease;
+	height: 80%;
+	width: 100%;
+	text-align: center;
+	vertical-align: center;
+	font-family: "源泉圓體 B";
+	color: whitesmoke;
+	background-color: #050505;
+	transition: all .5s ease;
 }
 .blog-text h3{
   font-size: 28px;
@@ -1169,7 +1171,7 @@ form button{
     font-family: poppins;
     font-size:20px;
     color: whitesmoke;
-    background:#BB0035;
+    background:#27ac37;
     opacity: .8;
     margin: 20px;
     cursor: pointer;
@@ -1401,7 +1403,7 @@ For devices with smaller width like mobile phone
     #breaker{
         height: 50vh;
         width: 200%;
-        background-color: #c70039;
+        background-color: #27ac37;
         opacity: 1;
         animation: breakeranimate 2s linear;
         display: none;
@@ -1569,7 +1571,7 @@ For devices with smaller width like mobile phone
                 display: none;
             }
             .service:hover .service-img img{
-                box-shadow:0px 0px 0px 0px #c70039 ;
+                box-shadow:0px 0px 0px 0px #27ac37 ;
             }
             .portfolio-image img{
                 height: 300px;
@@ -1856,7 +1858,7 @@ for tabs and large phones
     #breaker{
         height: 50vh;
         width: 200%;
-        background-color: #c70039;
+        background-color: #27ac37;
         opacity: 1;
         animation: breakeranimate 2s linear;
         display: none;
@@ -2040,7 +2042,7 @@ for tabs and large phones
                 display: none;
             }
             .service:hover .service-img img{
-                box-shadow:0px 0px 0px 0px #c70039 ;
+                box-shadow:0px 0px 0px 0px #27ac37 ;
             }
             .portfolio-image img{
                 height: 380px;
@@ -2383,17 +2385,17 @@ for tabs and large phones
         position: relative;
     }
     .blog-date{
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        color: whitesmoke;
-        font-size: 18px;
-        text-align: center;
-        font-weight: 400;
-        font-family: poppins;
-        padding: 3px;
-        width: 25%;
-        height: auto;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	color: whitesmoke;
+	font-size: 18px;
+	text-align: center;
+	font-weight: 400;
+	font-family: "源泉圓體 B";
+	padding: 3px;
+	width: 25%;
+	height: auto;
     }
     .blogs .img img{
         height: 100%;
@@ -2401,14 +2403,14 @@ for tabs and large phones
         transition: all .65s ease;
     }
     .blog-text{
-      height: 80%;
-      width: 100%;
-      text-align: center;
-      vertical-align: center;
-      font-family: poppins;
-      color: whitesmoke;
-      background-color: #050505;
-      transition: all .5s ease;
+	height: 80%;
+	width: 100%;
+	text-align: center;
+	vertical-align: center;
+	font-family: "源泉圓體 B";
+	color: whitesmoke;
+	background-color: #050505;
+	transition: all .5s ease;
     }
     .blog-text h3{
       font-size: 28px;
@@ -2561,4 +2563,8 @@ for tabs and large phones
         border-radius: 8px;
         transition: all .4s ease;
     }
+}
+     .aframebox {
+  height: 600px;
+  width: 1200px;
 }
